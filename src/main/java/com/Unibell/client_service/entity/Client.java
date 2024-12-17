@@ -32,13 +32,4 @@ public class Client {
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private Set<Email> emails = new HashSet<>();
 
-    public void addPhoneNumbers(PhoneNumber phoneNumber) {
-        phoneNumber.setClient(this);
-        phoneNumbers.add(phoneNumber);
-    }
-
-    public void addEmail(Email email) {
-        email.setClient(this);
-        emails.add(email);
-    }
 }
